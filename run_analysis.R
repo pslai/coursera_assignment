@@ -82,5 +82,5 @@ library(plyr)
 data2 <- ddply(data1, .(subjid, activity), numcolwise(mean))
 colnames(data2)[3:81] <- paste(colnames(data2)[3:81], "summarized", sep="-")
 
-write.table(data1, file.path(tidydata.path, "data1"), sep="\t")
-write.table(data2, file.path(tidydata.path, "data2"), sep="\t")
+write.table(data1, file.path(tidydata.path, "data1.txt"), sep="\t")
+write.table(data2, file.path(tidydata.path, "data2.txt"), sep="\t")
